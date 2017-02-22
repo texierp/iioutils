@@ -1,0 +1,51 @@
+.TH lsiio 8 "22 December 2009" "iioutils-0.1" "Linux IIO Utilities"
+.IX lsiio
+.SH NAME
+lsiio \- list IndustrialIO devices
+.SH SYNOPSIS
+.B lsiio
+[
+.I options
+]
+.SH DESCRIPTION
+.B lsiio
+is a utility for displaying information about IndustrialIO devices in the system and
+the sensors provided by them.
+
+To make use of all the features of this program,
+you need to have a Linux kernel
+which supports the iio subsystem
+(e.g., Linux kernel 2.6.32 or newer).
+
+.SH OPTIONS
+.TP
+.B \-v, \-\-verbose
+Tells
+.I lsiio
+to be verbose and display detailed information about the devices shown.
+This includes available sensors, ring buffers and triggers.
+.B \-D \fIdevice\fP
+Do not scan the /sys/class/iio directory,
+instead display only information
+about the device whose device file is given.
+The device file should be something like /sys/class/iio/device0.
+This option displays detailed information like the \fBv\fP option.
+.TP
+.B \-V, \-\-version
+Print  version information on standard output,
+then exit successfully.
+
+.SH RETURN VALUE
+If the specified device is not found, a non-zero exit code is returned.
+
+.SH FILES
+.TP
+.B /sys/class/iio
+An interface to IIO devices provided by the post-2.6.32 Linux
+kernels. Contains per-device subdirectories with per-sensor files.
+
+.SH SEE ALSO
+.BR lspci (8)
+
+.SH AUTHOR
+Manuel Stahl, <manuel.stahl@iis.fraunhofer.de>.

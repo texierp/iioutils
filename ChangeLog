@@ -1,0 +1,11 @@
+2010-08-03 Manuel Stahl <manuel.stahl@iis.fraunhofer.de>
+
+	* Add verbosity level DEBUG
+	* Update autoconf and automake
+	* Add experimental ring buffer support
+	* Update to linux v2.6.35 API
+
+2009-12-22 Manuel Stahl <manuel.stahl@iis.fraunhofer.de>
+
+	* Created package
+	* Compatible to linux v2.6.34 API
